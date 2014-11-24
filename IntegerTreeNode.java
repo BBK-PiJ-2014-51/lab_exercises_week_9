@@ -1,4 +1,5 @@
 
+
 public class IntegerTreeNode{
 	int value;
 	IntegerTreeNode left;
@@ -44,6 +45,37 @@ public class IntegerTreeNode{
 		}
 	}
 	
+	public String toString(){
+		String result = "" + value;  
+		if (left != null) result +=" L[" + left.toString() + "]";
+		else result +=" L[]";
+		if (right!=null) result += " R[" + right.toString() + "]"; 
+		else result += "R[]";
+		//result += "]";
+		return result;
+	}
+	
+	public String toStringSimple(){
+		String result = "" + value;  
+		if (left != null) result +=" [" + left.toStringSimple() + "]";
+		//else result +=" L[] ";
+		if (right!=null) result += " [" + right.toStringSimple() + "]"; 
+		//else result += "R[] ";
+		//result += "]";
+		return result;
+	}
+	
+	public int depth(){
+		if (left == null && right == null){
+			return 0;
+		} 
+		int leftHeight = 0;
+		int rightHeight = 0;
+		if (left != null)leftHeight = left.depth();
+		if (right != null)rightHeight = right.depth();
+		return (leftHeight > rightHeight) ? leftHeight + 1 : rightHeight + 1;
+		
+	}
 	public int getMin(){
 		return (left == null) ? value : left.getMin() ;
 	}
