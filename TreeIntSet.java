@@ -69,4 +69,14 @@ class TreeIntSet implements IntSet{
 		}
 	}
 	
+	public String toString(){
+		String result = value + ", ";  
+		if (left != null) result += left.toString();
+		else result +="";
+		if (right!=null) result += right.toString(); 
+		else result += "";
+		//result += "]";
+		return result;
+	}
+	
 }
