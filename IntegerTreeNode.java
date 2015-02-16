@@ -83,5 +83,10 @@ public class IntegerTreeNode{
 	public int getMax(){
 		return (right == null) ? value : right.getMax() ;
 	}
+	
+	public boolean remove(int value){
+		
+		return false;
+	}
 
 }

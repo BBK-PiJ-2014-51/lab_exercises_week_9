@@ -20,18 +20,22 @@ class Exercise1Test{
 		
 		//ex1.2 tests
 		System.out.println("Ex1.2 tests");
-		tree = new IntegerTreeNode(6);
-		tree.add(9);
-		tree.add(5);
-		tree.add(3);
-		tree.add(8);
-		tree.add(11);
-		tree.add(12);
-		System.out.println("[" + tree.toString() + "]");
-		System.out.println("[" + tree.toStringSimple() + "]");
+		IntegerTreeNode treeB = new IntegerTreeNode(6);
+		treeB.add(9);
+		treeB.add(5);
+		treeB.add(3);
+		treeB.add(8);
+		treeB.add(11);
+		treeB.add(12);
+		System.out.println("[" + treeB.toString() + "]");
+		System.out.println("[" + treeB.toStringSimple() + "]");
 		System.out.println("");
 		
 		//ex1.3 tests
-		System.out.println("" + tree.depth());
+		System.out.println("Ex 1.3 Tests");
+		System.out.println("First tree: " + tree.depth());
+		System.out.println("Second Tree: " + treeB.depth());
+		IntegerTreeNode treeC = new IntegerTreeNode(6);
+		System.out.println("Another tree: " + treeC.depth());
 	}	
 }
