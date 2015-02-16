@@ -1,2 +1,1 @@
-# lab_exercises_week_9
-lab_exercises_week_9
+still to do: 1.4, 1.5, 4, 5
